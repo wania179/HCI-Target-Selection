@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 07 Lab: Target Selection Experiment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>HCI Experiment: Target Selection Task</h1>
+            <p>Model: Perception → Decision → Motor Execution</p>
+        </header>
+
+        <div id="game-container">
+            <canvas id="experimentCanvas"></canvas>
+            
+            <div id="hud">
+                <div class="stat-card">
+                    <span class="label">Time</span>
+                    <span id="time-val" class="value">0.00s</span>
+                </div>
+                <div class="stat-card">
+                    <span class="label">Accuracy</span>
+                    <span id="accuracy-val" class="value">100%</span>
+                </div>
+                <div class="stat-card highlight">
+                    <span class="label">Fitts ID</span>
+                    <span id="fitts-val" class="value">0.00</span>
+                </div>
+            </div>
+
+            <div id="instructions">
+                <h2>Phase 1: Perception</h2>
+                <p>Identify the <strong>shaking green target</strong> among the moving decoys.</p>
+                <button id="start-btn">Start Trial</button>
+            </div>
+        </div>
+
+        <div id="results-modal" class="hidden">
+            <div class="modal-content">
+                <h2>Trial Complete!</h2>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <small>Movement Time</small>
+                        <strong id="res-mt">0ms</strong>
+                    </div>
+                    <div class="result-item">
+                        <small>Index of Difficulty</small>
+                        <strong id="res-id">0</strong>
+                    </div>
+                </div>
+                <button id="retry-btn">Next Trial</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
